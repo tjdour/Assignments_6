@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Assignment 6.2.1
+//Write a C# program to implement a stack by using array with push and pop operations.
+
+using System;
 using System.Linq;
 
 Console.WriteLine("Manual Stack Using an Array:");
