@@ -21,7 +21,7 @@ int[] ProductExceptSelf(int[] nums)
 
     prefix[0] = 1;
 
-    // Build prefix products
+   
     for (int i = 1; i < nums.Length; i++)
     {
         prefix[i] = prefix[i - 1] * nums[i - 1];
@@ -29,13 +29,13 @@ int[] ProductExceptSelf(int[] nums)
 
     suffix[nums.Length - 1] = 1;
 
-    // Build suffix products
+
     for (int i = nums.Length - 2; i >= 0; i--)
     {
         suffix[i] = suffix[i + 1] * nums[i + 1];
     }
 
-    // Combine prefix and suffix
+    
     for (int i = 0; i < nums.Length; i++)
     {
         answer[i] = prefix[i] * suffix[i];
